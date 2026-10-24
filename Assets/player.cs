@@ -8,12 +8,16 @@ public class player_controler : MonoBehaviour
     public float LongitudRaycast = 0.1f;
     public LayerMask CapaSuelo;
 
+    [SerializeField] private ContadorJuego contadorJuego; // NUEVO
+
     private bool enSuelo;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -44,7 +48,15 @@ public class player_controler : MonoBehaviour
             rb.AddForce(new Vector2(0f, FuerzaSalto), ForceMode2D.Impulse);
         }
         animator.SetBool("Ensuelo", enSuelo);
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Collectible"))
+        {
+            contadorJuego.Sumar(other.name);
+            Destroy(other.gameObject);
+        }
     }
 
     void OnDrawGizmos()

@@ -1,24 +1,37 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
+
 public class ContadorJuego : MonoBehaviour
 {
-    private float Puntos;
+    private Dictionary<string, int> conteo = new Dictionary<string, int>()
+    {
+        { "Moneda", 0 },
+        { "banana", 0 },
+        { "cerveza", 0 }
+    };
     private TextMeshProUGUI textMesh;
 
-    private void Start()
+    void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
+        Actualizar();
     }
 
-    private void Update()
+    public void Sumar(string nombre)
     {
-        Puntos += Time.deltaTime;
-        textMesh.text = Puntos.ToString("0");
+        if (conteo.ContainsKey(nombre))
+        {
+            conteo[nombre]++;
+            Actualizar();
+        }
     }
 
-    public void SumarPuntos(float puntosEntradas)
+    void Actualizar()
     {
-        Puntos += puntosEntradas;
+        List<string> partes = new List<string>();
+        foreach (var par in conteo)
+            partes.Add(par.Key + ": " + par.Value);
+        textMesh.text = string.Join(" | ", partes);
     }
-
 }

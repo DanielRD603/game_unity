@@ -527,6 +527,7 @@ MonoBehaviour:
   CapaSuelo:
     serializedVersion: 2
     m_Bits: 8
+  contadorJuego: {fileID: 1534727240}
 --- !u!212 &576215064
 SpriteRenderer:
   serializedVersion: 3
@@ -894,11 +895,10 @@ GameObject:
   m_Component:
   - component: {fileID: 787857547}
   - component: {fileID: 787857546}
-  - component: {fileID: 787857548}
   - component: {fileID: 787857549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: banana
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -978,21 +978,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &787857548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787857545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b8d9ec11442994d90b4f2b920ae653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Objeto
-  efecto: {fileID: 0}
-  CantidadPuntos: 100
-  contadorJuego: {fileID: 1534727240}
 --- !u!58 &787857549
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1296,11 +1281,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1089346793}
   - component: {fileID: 1089346792}
-  - component: {fileID: 1089346795}
   - component: {fileID: 1089346794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moneda
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1416,21 +1400,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.6638889
---- !u!114 &1089346795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089346791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b8d9ec11442994d90b4f2b920ae653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Moneda
-  efecto: {fileID: 0}
-  CantidadPuntos: 500
-  contadorJuego: {fileID: 1534727240}
 --- !u!1 &1384989546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,11 +1802,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1823498029}
   - component: {fileID: 1823498028}
-  - component: {fileID: 1823498027}
   - component: {fileID: 1823498026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cerveza
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1878,21 +1846,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.609
---- !u!114 &1823498027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823498025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b8d9ec11442994d90b4f2b920ae653, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Objeto
-  efecto: {fileID: 0}
-  CantidadPuntos: 300
-  contadorJuego: {fileID: 1534727240}
 --- !u!212 &1823498028
 SpriteRenderer:
   serializedVersion: 3
